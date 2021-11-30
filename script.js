@@ -1,98 +1,51 @@
-// fetch('./data.json')
-// 	.then((response) => {
-// 		return response.json();
-// 	})
-// 	.then((data) => console.log(data));
+/////Selectors
 
-// const data = fetch('./data.json')
-// 	.then((response) => {
-// 		return response.json();
-// 	})
-// 	.then((data) => console.log(data[0]));
+const chronoSelector = document.querySelectorAll('.chrono');
+chronoSelector.forEach((element) => {
+	element.addEventListener('click', chronoOnClick);
+});
 
-// console.log(data);
+//// Variables
+let timeframe = 'daily'; /// default starting value;
 
-// var data = JSON.parse(ajaxFunction('/data.json'));
-// console.log(data);
+/////  Get Json Data
+let data = {};
 
-// fetch('./data.json')
-// 	.then((response) => {
-// 		return response.json();
-// 	})
-// 	.then((json) => {
-// 		var jsonData = JSON.parse(json);
-// 		console.log();
-// 	});
+fetch('./data.json').then((resp) => resp.json()).then((jsonData) => {
+	jsonData.forEach((element) => {
+		createRegularCard(element, timeframe);
+	});
+});
 
-// console.log(jsonData);
+function chronoOnClick(event) {
+	timeframe = event.target.innerText.toLowerCase();
+	chronoSelector.forEach((element) => {
+		element.classList.remove('chrono-active');
+	});
 
-// let data;
-
-// function getData(url, cb) {
-// 	fetch(url).then((response) => response.json()).then((result) => cb(result));
-// }
-
-// const data = getData('./data.json', data);
-
-// console.log({ data });
-
-// getData('./data.json', (data) => console.log({ data }));
-
-// async function getData(url) {
-// 	const response = await fetch(url);
-
-// 	return response.json();
-// }
-
-// const data = getData('./data.json');
-
-// console.log({ data });
-
-// let jsondata;
-// fetch('./data.json')
-// 	.then(function(u) {
-// 		return u.json();
-// 	})
-// 	.then(function(json) {
-// 		createjson(json);
-// 	});
-
-// function createjson(json) {
-// 	jsondata = json.map(json);
-// }
-// console.log(jsondata);
-
-// async function githubUsers() {
-// 	let response = await fetch('./data.json');
-// 	let jsonData = await response.json();
-// 	console.log(jsonData);
-// }
-
-// githubUsers();
-
-// console.log(jsonData);
-
-// async function getData() {
-// 	const response = await fetch('./data.json');
-// 	const data = await response.json();
-// 	return data;
-// }
-
-// getData();
-// console.log(getData());
-const URL =
-	'https://github.com/Geoff-Walker/fem-time-tracking_json/blob/18d82008a8b095aec425b6a28a919c32b429876f/data.json';
-let DATA = [];
-
-function getData() {
-	fetch(
-		'https://github.com/Geoff-Walker/fem-time-tracking_json/blob/18d82008a8b095aec425b6a28a919c32b429876f/data.json'
-	)
-		.then((res) => res.json())
-		.then((data) => {
-			DATA = data;
-		});
+	event.target.classList.add('chrono-active');
 }
-getData();
 
-console.log(DATA);
+// function updateCards(timeframe);
+
+function createRegularCard(element, timeframe) {
+	let title = element['title'];
+	let current = element['timeframes'][timeframe]['current'];
+	let previous = element['timeframes'][timeframe]['previous'];
+
+	console.log(title, current, previous);
+	return;
+
+	` <div class="item item-${title}">
+    <div class="block">
+      <div class="heading">
+        <h3>${title}</h3>
+        <img class="options" src="images/icon-ellipsis.svg" alt="Options">
+      </div>
+    <div class="data">
+      <h1>${current}${hrs}</h1>
+      <p>Last Last ${timeframe} - ${previous}hrs</p>
+    </div>
+    </div>
+  </div>`;
+}
