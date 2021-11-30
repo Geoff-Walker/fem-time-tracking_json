@@ -72,12 +72,27 @@
 
 // console.log(jsonData);
 
-async function getData() {
-	const response = await fetch('./data.json');
-	var data = await response.json();
+// async function getData() {
+// 	const response = await fetch('./data.json');
+// 	const data = await response.json();
+// 	return data;
+// }
 
-	return data;
+// getData();
+// console.log(getData());
+const URL =
+	'https://github.com/Geoff-Walker/fem-time-tracking_json/blob/18d82008a8b095aec425b6a28a919c32b429876f/data.json';
+let DATA = [];
+
+function getData() {
+	fetch(
+		'https://github.com/Geoff-Walker/fem-time-tracking_json/blob/18d82008a8b095aec425b6a28a919c32b429876f/data.json'
+	)
+		.then((res) => res.json())
+		.then((data) => {
+			DATA = data;
+		});
 }
-
 getData();
-console.log(data);
+
+console.log(DATA);
