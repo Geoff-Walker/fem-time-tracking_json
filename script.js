@@ -22,7 +22,7 @@ let data = {};
 
 fetch('./data.json').then((resp) => resp.json()).then((jsonData) => {
 	jsonData.forEach((element) => {
-		section.insertAdjacentHTML('beforeend', createRegularCard(element, timeframe));
+		section.insertAdjacentHTML('beforeend', createCards(element, timeframe));
 	});
 
 	jsonData.forEach((element) => {
@@ -79,7 +79,7 @@ function updateCard(card, timeframe) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function createRegularCard(element, timeframe) {
+function createCards(element, timeframe) {
 	let title = element['title'];
 	let current = element['timeframes'][timeframe]['current'];
 	let previous = element['timeframes'][timeframe]['previous'];
