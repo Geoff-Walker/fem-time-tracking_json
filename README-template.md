@@ -8,7 +8,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+  - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Url](https://github.com/Geoff-Walker/fem-time-tracking_json)
-- Live Site URL: [Live Site URl](https://geoff-walker.github.io/fem-time-tracking_json/)
+- Solution URL: [https://github.com/Geoff-Walker/fem-time-tracking_json](https://github.com/Geoff-Walker/fem-time-tracking_json)
+- Live Site URL: [https://geoff-walker.github.io/fem-time-tracking_json/](https://geoff-walker.github.io/fem-time-tracking_json/)
 
 ## My process
 
@@ -46,11 +46,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Local JSON data
 
 ### What I learned
 
@@ -91,11 +87,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Geoff Walker](https://www.geoff-walker.io)
 
 ## Acknowledgments
 
