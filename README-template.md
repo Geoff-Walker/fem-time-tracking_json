@@ -8,17 +8,21 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-  - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+  - [Author](#author)
+
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+Personally I am a fan of working through new features using lectures and tutorials the only problem with this is it can leave you short of the experience needed to undertake completetly different work.  For this reason I am a massive fan of Frontend Mentor as I see these as a hard test, to see if I can now do this alone and be professionally useful.
+
+This challenge for me was all about getting data out of a JSON file and using a DOM Algorithm to update the page based on the JSON data.  To this end I am delighted that I managed to complete the challenge and get a nice outcome.  
+
+I also admit with shame that while I havce known for a while now mobile first is the way to build.  I have been building in desktop first and then starting a new file implementing that desktop first process in a mobile first way.  This is really inefficient and bad practice on my part so this project will be my first all mobile first method.
 
 ### The challenge
 
@@ -26,7 +30,7 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Switch between viewing Daily, Weekly, and Monthly stats
+- Switch between viewing Daily, Weekly, and Monthly stats using JSON data
 
 ### Screenshot
 
@@ -36,8 +40,6 @@ Users should be able to:
 
 - Solution URL: [https://github.com/Geoff-Walker/fem-time-tracking_json](https://github.com/Geoff-Walker/fem-time-tracking_json)
 - Live Site URL: [https://geoff-walker.github.io/fem-time-tracking_json/](https://geoff-walker.github.io/fem-time-tracking_json/)
-
-## My process
 
 ### Built with
 
@@ -49,48 +51,27 @@ Users should be able to:
 - Local JSON data
 
 ### What I learned
+After completing this project in mobile first work flow I have seen first hand, how much more efficient this is.  Both in terms of time and decreasing the codebase of the project, its something I will look to continue to do going forward.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I have also learned a lot about the fetch API and loading and using JSON data.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+JSON Data and the fetch API confused me especially when I couldn't access the variable outside of the fetch function or a function that referenced it.  Even when I created this as a var to get global functionality.  I always got a promise returned and while I know thats right, I don't yet understand why after parsing it in I couldn't see it.  For this reason I had to use a little help in getting access to the JSON data.  This really frustrated me and it was only something I did after spending hours trying myself.  
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+JSON, Fetch API, ASYNC AWAIT are all things while I understand and would back myself to complete, are things that I need to continue to develop with.
+
+Also with experience comes answers but this is the one project I have completed on Frontend Mentor where I couldn't get a fully responsive layout implented.  I ruled out it being the algorithm but never did bottom out why it remained fixed width despite everything I could see and access in the inspector telling me it should grow.  I tried min-widths and 100% but it never responded, I had a work through stackoverflow solutions but never found one that made a difference even if set to inline block.
+
+I fealt as the design works on all devices the fixed pixel layout was not a huge issue with the three media queries written.
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Youtube Tutorial](https://www.youtube.com/watch?v=AtWjtiayOsI&t=48s) - This video helped me understand the process of accessing the JSON data I already had the algorithm and had managed to push that on a little from the attached solution by using a ternary operator to either give hr or hrs.  Shamefully though the section on JSON and the Fetch API was really really useful.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
 - Website - [Geoff Walker](https://www.geoff-walker.io)
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
