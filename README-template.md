@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Geoff-Walker/fem-time-tracking_json](https://your-solution-url.com)
-- Live Site URL: [https://geoff-walker.github.io/fem-time-tracking_json/](https://your-live-site-url.com)
+- Solution URL: [Solution Url](https://github.com/Geoff-Walker/fem-time-tracking_json)
+- Live Site URL: [Live Site URl](https://geoff-walker.github.io/fem-time-tracking_json/)
 
 ## My process
 
